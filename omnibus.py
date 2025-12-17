@@ -84,3 +84,43 @@ if __name__ == "__main__":
             print(f"[+] PurpleGuard Platform Synced: metadata.json updated.")
         except Exception as e:
             print(f"[-] Sync Failed: {e}")
+
+# --- CHAOS LOGIC MODULE ---
+import time
+import random
+
+def chaos_delay(base_delay=5, intensity=0.5):
+    """Adds non-linear jitter to mimic human behavior."""
+    jitter = base_delay * intensity
+    actual_sleep = base_delay + random.uniform(-jitter, jitter)
+    time.sleep(max(0.1, actual_sleep))
+
+def get_chaotic_headers():
+    """Cycles identity to prevent JA3/Fingerprint tracking."""
+    ua_list = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+    ]
+    return {
+        "User-Agent": random.choice(ua_list),
+        "X-Forwarded-For": f"{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}"
+    }
+# --- END CHAOS LOGIC ---
+
+# --- WAF WATCHDOG SNIPER ---
+BASE_DELAY = 5  # Global starting delay
+
+def watchdog_monitor(status_code):
+    """Adjusts swarm speed based on WAF responses."""
+    global BASE_DELAY
+    if status_code in [403, 429]:
+        print(f"[!] WAF DETECTED ({status_code}). Escalating Chaos Level...")
+        BASE_DELAY *= 2  # Double the wait time
+        time.sleep(30)   # Immediate emergency cool-down
+    elif status_code == 200 and BASE_DELAY > 5:
+        BASE_DELAY -= 0.5 # Gradually speed back up if clear
+    
+    # Run the chaos delay with the updated base
+    chaos_delay(base_delay=BASE_DELAY, intensity=0.8)
+# --- END WATCHDOG ---

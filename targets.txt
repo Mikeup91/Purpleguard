@@ -1,0 +1,26 @@
+# --- NEWEST LAUNCHES (DEC 2025) ---
+https://vercel.com
+api.https://vercel.com
+hotmart.com
+bankunited.com
+henkel.com
+
+# --- BROAD SCOPE & RESEARCH FRIENDLY ---
+arc.net
+notion.so
+api.notion.com
+booking.com
+*.booking.com
+aswatson.com
+crypto.com
+*.crypto.com
+
+# --- ESTABLISHED PROGRAMS WITH RECENT UPDATES ---
+automattic.com
+wordpress.com
+jetpack.com
+databricks.com
+bitmex.com
+http://testphp.vulnweb.com/
+http://altoromutual.com/
+http://zero.webappsecurity.com/

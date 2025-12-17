@@ -48,6 +48,12 @@ const PurpleGuardDashboard = () => {
                 </h1>
             </header>
 
+            {metadata.ai_analysis && (
+                <div className="mb-6 bg-red-950/20 border border-red-500 p-4 rounded-sm animate-pulse">
+                    <h3 className="text-red-500 text-xs font-bold uppercase mb-2">Hephaestus Intelligence Report</h3>
+                    <p className="text-white text-xs leading-relaxed font-mono whitespace-pre-wrap">{metadata.ai_analysis}</p>
+                </div>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-slate-900 border border-red-500/30 p-6 rounded-sm">
                     <h3 className="text-red-400 text-xs uppercase mb-2">Total Confirmed Kills</h3>
